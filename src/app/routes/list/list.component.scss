@@ -1,0 +1,18 @@
+.list {
+    border: 0.1em solid black;
+}
+
+.row {
+    padding: 0.5em;
+    &:nth-child(even) {
+        background: #eee;
+    }
+
+    &:hover {
+        background: #ddd;
+    }
+
+    &.selected {
+        background: #ccc;
+    }
+}

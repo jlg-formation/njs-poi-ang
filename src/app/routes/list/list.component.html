@@ -1,7 +1,17 @@
 <main>
   <h1>Liste des utilisateurs</h1>
+  <div class="buttons">
+    <button routerLink="/create">Create</button>
+    <button routerLink="/update">Update</button>
+    <button (click)="delete()">Delete</button>
+  </div>
   <div class="list">
-    <div *ngFor="let user of [1, 1, 1, 1, 1]" class="row">
+    <div
+      class="row-{{ index }}"
+      (click)="select(index)"
+      *ngFor="let user of [0, 1, 2, 3, 4, 5]; let index = index"
+      class="row"
+    >
       GUENEGO Jean-Louis
     </div>
   </div>
